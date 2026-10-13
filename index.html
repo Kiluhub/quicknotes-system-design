@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickNotes API Client</title>
+
+  <!-- Basic styling, including separate success and error message styles -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- defer: the script runs after the HTML is parsed, so all ids exist -->
+  <script src="api.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>QuickNotes API Client</h1>
+    <p>Talks to the JSONPlaceholder practice API</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Load notes (GET)</h2>
+      <button id="load-btn" type="button">Load notes</button>
+
+      <!-- Shows loading, success and error messages -->
+      <p id="status" role="status"></p>
+    </section>
+
+    <section>
+      <h2>Create a note (POST)</h2>
+
+      <!-- novalidate: our JavaScript shows the validation messages -->
+      <form id="note-form" novalidate>
+        <!-- Labels linked to their fields with for/id -->
+        <label for="title-input">Title (required, max 100 characters)</label>
+        <input type="text" id="title-input" name="title">
+
+        <label for="body-input">Body (optional)</label>
+        <textarea id="body-input" name="body" rows="4"></textarea>
+
+        <button type="submit" id="submit-btn">Create note</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Notes</h2>
+      <!-- Empty list, filled by api.js (notes or the empty-state message) -->
+      <ul id="notes-list"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 QuickNotes</p>
+  </footer>
+</body>
+</html>
