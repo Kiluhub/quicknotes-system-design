@@ -1,0 +1,140 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: #222;
+  background-color: #eef1f6;
+}
+
+header {
+  background-color: #1f3a8a;
+  color: #fff;
+  text-align: center;
+  padding: 20px 16px;
+}
+
+header h1,
+header p {
+  margin: 0;
+}
+
+main {
+  max-width: 700px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+section {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Form fields stacked and full width */
+label {
+  display: block;
+  font-weight: bold;
+  margin: 12px 0 6px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  font-family: inherit;
+  border: 1px solid #999;
+  border-radius: 6px;
+}
+
+button {
+  background-color: #1f3a8a;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+button:hover:not(:disabled) {
+  opacity: 0.85;
+}
+
+/* Disabled while a request is running */
+button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* Status message: one distinct style per state */
+#status {
+  margin: 12px 0 0;
+  padding: 0;
+  min-height: 1.5em;
+  font-weight: bold;
+}
+
+#status.loading {
+  color: #92400e;
+}
+
+#status.success {
+  color: #166534;
+  background-color: #dcfce7;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+#status.error {
+  color: #991b1b;
+  background-color: #fee2e2;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+/* Notes list */
+#notes-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.note {
+  border: 1px solid #ddd;
+  border-left: 6px solid #1f3a8a;
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  background-color: #f8f9fc;
+}
+
+.note h3 {
+  margin: 0 0 6px;
+  text-transform: capitalize;
+}
+
+.note p {
+  margin: 0;
+}
+
+.delete-btn {
+  background-color: #b91c1c;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+}
+
+/* Empty-state message */
+.empty {
+  color: #666;
+  font-style: italic;
+}
